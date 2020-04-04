@@ -1,0 +1,14 @@
+Terminology
+	- Interactive shell issues one command at a time 
+	- Expression: value and operator, reduces to single value
+	- All values belong to a Data Point
+	- String * int will replicate the string
+	- Variable: assign value to, keep in computers memory. Evaluates to what it contains
+	- Statement: does not evaulate to a single statement, commonly called instruction
+
+First Program
+	- input() retrieves user input
+		- will always return a string
+	- len() for length, str()/int()/float() for cast/convert to different data types
+	- Execution in python starts at top and moves down
+	- Functions are mini programs
