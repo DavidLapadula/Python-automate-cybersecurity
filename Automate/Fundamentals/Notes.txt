@@ -1,0 +1,60 @@
+Terminology
+	- Interactive shell issues one command at a time 
+	- Expression: value and operator, reduces to single value
+	- All values belong to a Data Point
+	- String * int will replicate the string
+	- Variable: assign value to, keep in computers memory. Evaluates to what it contains
+	- Statement: does not evaulate to a single statement, commonly called instruction
+
+First Program
+	- input() retrieves user input
+		- will always return a string
+	- len() for length, str()/int()/float() for cast/convert to different data types
+	- Execution in python starts at top and moves down
+	- Functions are mini programs
+
+Flow Control
+	- Comparisons evaluate to boolean value
+	- Integers and strings never equal to eachother; floats and integers can be equal
+	- not, or, and for Boolean operators
+	- Indentation determines block of code to determine level
+	- Condition can use truthy/falsy. Blank string is falsy, 0 is falsy
+	- New block begins after a colon has been added
+	- While loop: only while condition is true
+	- For loop: execute only a specific number of times
+	- bool() to return boolean value of whatever you pass it
+	- break: get out of loop immediately, without checking condition
+	- continue: skip this iteration, jump back to start and check condition
+	- range() range object, for sequence of integers. Optional 3rd argument for 'step' or increment it increases
+
+Built-in Functions
+	- Some are built in (len(), str()), other have to be imported
+	- Modules, standard library
+	- Module - related functions that can be used
+	- pip to install 3rd party modules
+	- Pyperclip
+		- Read and write text to clipboard
+
+Custom Functions
+	- def func(): in order to make function
+	- Group code that gets exeuted multiple times
+	- Function defined with parameter, called with argument
+	- Fn will evaluate to what it returns
+	- None data type, represents nothing value (equivalent to null)
+	- All have a return value, no return statement and return will be None
+		- Keyword args (optional), like 'sep=' and 'end=' for print to control what gets put at end of string and between arguments
+	
+Scope
+	- Scope is area of the source code; container of variables - allows for modularity of the program
+	- Allows treating function as Black box, only arguments passed in and return is what matters
+	- Assignment inside function, then is considered local variable
+		- Change global variable inside function need to assign 'global' to the variable at the top of the function
+	- Global: Inside fn are in local scope
+		- Created when program starts, to when it terminates
+		- Cannot access fn local scope
+	- Local: outside functions are global
+		- Created when fn called, to when it returns (destroyed after that)
+		- Can access global, but not other fn scope. Local of different functions are totally different
+
+TryExcept
+	- 
