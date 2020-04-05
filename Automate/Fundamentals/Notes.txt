@@ -57,4 +57,8 @@ Scope
 		- Can access global, but not other fn scope. Local of different functions are totally different
 
 TryExcept
-	- 
+	- Detect error, handle it and continue
+	- Same block form: try:...except <ErrorType>:
+	- Do not need ErrorType, can be generic and will accept all errors
+		- Code in try clause causes error in except statement (could be catch all), then code in except block will run and will not crash
+		- Can be used for input validation, 'raise' Exception or other <ErrorType> to throw custom error when performing validation
