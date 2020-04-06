@@ -1,0 +1,55 @@
+List
+ - Value that contains values, or items, coma delimited
+ - Integer index
+    - Evaluates to a single item
+    - Index can be used to assign new value
+- Slice
+    - list[0:1] not inclusive
+    - Assign slice to list and that will make new items in the list
+    - Leaving out first is same as using first, leaving out last is same as using last
+ - Negative integer starts from the last value and goes backwards
+    - Wrong index will get out of range error
+- Del statement to remove item from list, used as unnasignment
+- Pass len() a list to print number of items in  list
+- Can use + to concatenate lists, and * to multiply the list
+    - Methods available to string, also to list
+- list() to return items in String as list
+- in and not in operators to see if item is in list
+- Range object similar to list
+- Can pass range to list and will give you the list
+- Can pass len(list) to range as for loop operator
+- Multiple assignment
+    - Variables on left, list or multiple variables on right and will assign at the approproate index
+    - Used for swap operations 
+Augmented assignment
+    - Shorcuts for +,-,*,/,%
+Method
+    - Function called on value
+    - Belong to certain data type
+    - Property of object
+    - List modified in place
+    - index() to search from string
+    - append() to end, insert() to front or give index to determine where to put it
+    - remove() to take away item in the list for value provided no matter where it is
+    - sort() where there is list of int or strings
+        - Also take reverse keyword
+        - ASCII-betical: upper case come before lowercase, 'Z' comes before 'a'
+            - Can pass key=str.lower as keyword argument to sort in order to get true alphabetical order
+List vs String
+    - Many same methods available
+    - List is Mutable
+        - Values can change, can reassign
+        - Assigning reference to variable, not actual data
+        - Even if you pass mutable to function as arg, changes it everywhere, despite local scope
+        - Reference types used to save memory and just point to potentially large data set
+    - String is Immutable
+        - Values cannot be changed or reassigned
+        - Need to make new string with slice()
+- All mutable values are reference types; immutable values cannot be modified in place, a new one is made
+- copy.deepcopy() to make brand new copy
+- Line continuination: list can span multiple lines of code without considering it a new block like usual
+    - \ will make a new line and ignore indentation on next line; keeps in the same block
+
+
+
+

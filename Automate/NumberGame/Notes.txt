@@ -1,1 +1,2 @@
-Iterator in for loop gets put into global scope, when not initialized with var
+- Iterator in for loop gets put into global scope, when not initialized with var
+- No command for declaring variable in python
