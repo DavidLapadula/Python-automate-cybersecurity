@@ -48,8 +48,48 @@ List vs String
 - All mutable values are reference types; immutable values cannot be modified in place, a new one is made
 - copy.deepcopy() to make brand new copy
 - Line continuination: list can span multiple lines of code without considering it a new block like usual
-    - \ will make a new line and ignore indentation on next line; keeps in the same block
-
-
-
-
+    - \ will make a new line and ignore indentation on next line; keeps in the same block and span instrcutions across multiple lines
+- Dictionary
+    - {} and key/value
+    - ['key'] to access
+    - Unordered. Same keys and values means they are identical
+    - KeyError error message for wrong
+    - in and not in to see what is there
+    - Reference type
+    - keys(), items(), values() will return list like items that work for for loop
+        - values() will return list like
+    - Can use k,v in for loop for items() because returns tuple
+    - get(key, fallback value) to prevent checking to see if something is in a dict
+    - setDefault(k, v), set key if not already there
+    - pprint: pass list or dictionary and will prettify everything
+        - pprint.pformat: string format of prettified list or dictionary
+- Tuple
+    - Same as list, immutable and uses parentheses
+- Data Structures
+    - Represent real world items
+    - type(item): will tell you the value of the item
+- Advanced Strings
+    - \ to escape the character 
+    - Raw String r'' - just a raw string with no escapes
+    - '''<>''' or """<>""" is multline string
+    - Same fn's as list: indexing, slices, in/notin
+    - Methods
+        - Return a new string value, do not modify in place
+        - upper(), lower(), title() to convert
+        - isupper(), islower(), isalpha(), isalnum(), istitle(), isdecimal(): boolean to describe nature of string 
+            - All values have to match in the string
+        - startswith(), endswith()
+        - join(): takes list, but called on delimiter to separate values
+        - split(): called on string but returns list, optional argument to determine separator
+        -ljust(), rjust(): provide length as argument to determine total length of string and will padd with. second argument for optional fill character
+        - center(): argument for space amount and text will be entered
+        - rstrip(), lstrip(), strip(): remove whitespace from either side or both. 
+            - Can provide letters to strip from either side, up until first character that wasnt passed to strip method
+        - replace(): first param is what to replace, second is what to replace with
+    - Interpolation
+        - 'String %s' %(some, variables, to, insert) conversion specifiers to determine where to put other string
+- Batch
+    - .bat file with multiple instructions. Annotation with path to file that should be run
+    - Contains commands that can be run; then put path to .bat in PATH env and can just call name of bat to run it
+        - %* tells batch to pass off to file running in batch
+    - sys module for sys.argv, which is list for each argument provided to the command line
