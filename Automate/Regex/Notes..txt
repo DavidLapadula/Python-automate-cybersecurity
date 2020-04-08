@@ -1,0 +1,12 @@
+- Simplified language for finding text
+    - re.compile(<pattern>) pass raw string to escape everything
+    - \d for digit
+    - compile() has search() method that you pass string to. group() to get the occurence
+        - has findAll() to get every occurence
+
+- Groups and Pipe
+    - Parentheses to mark groups
+    - Pass index to group() to get which set of parentheses you want
+    - \ to escape to look for reserved regex character literallt
+    - | to look for multiple things like prefix Car(maker|paint) with keep prefix and look for all those words
+    - 
