@@ -1,0 +1,49 @@
+- Simplified language for finding text
+    - re.compile(<pattern>) pass raw string to escape everything
+    - \d for digit
+    - compile() has search() method that you pass string to. group() to get the occurence
+        - has findAll() to get every occurence
+
+- Groups and Pipe
+    - Parentheses to mark groups
+    - Pass index to group() to get which set of parentheses you want
+    - \ to escape to look for reserved regex character literallt
+    - | to look for multiple things like prefix Car(maker|paint) with keep prefix and look for all those words
+
+- Specific number of repetitions
+    - ? match preceding group 0 or 1 times
+    - * match 0 or more times (doesnt require group to be there)
+    - + match 1 or more (capturing group is required)
+    - (group) {3} to match group exactly 3 times
+    - (group) {x, y} match min x or max y amount of times
+        - Works with slices {:5} = 0-5 and {5:} is unbounded
+        - {}? means non-greedy, match smallest possible string
+    - Greedy by default: as much as possible, or longest possible string that matches pattern
+
+- Character classes and findAll
+    - findAll: find all matches of a pattern, and returns list of them
+    - With capturing group will return list; if has two or more groups, will return tuple with a string of each group for each match
+    - Character class
+        - Represents a character. Options for digits, characters, or spaces
+    - Making your own
+        - "[<>]" inside is characters you want to match, also accepts ranges
+        - Optional ^ at start of character class for negative match
+
+- ^ at beggining for string to match at start, $ to match at the end
+- Combine ^<>$ to mean beggining and end of the string. In practice it means the whole string
+- . wildcard: any character except new line. So .at looks for any 1 character followed by at
+    - Can put other identifier after . to specify type or amount like .\d for for digit or .{1} for amount
+    - .* since * means anything, it matches any character except new line, stops after new line
+        - To bypass new line stopping, pass re.DOTALL as second argument to compile
+    - .*? is non greedy, so as little as possible
+- Can also pass re.IGNORECASE as second argument to ignore case
+- sub(<subsitute>, <string>) to subsitute instead of just finding.
+    - If string has capturing group can used index like \1, \2 in the first argument to use in the replace
+- re.VERBOSE: white space not in the actual pattern, so can make multi line and add another comment
+- Bitwise | character to pass as second argument to re.compile and pass multiple keyword argument as second argument
+
+
+
+
+
+
