@@ -28,7 +28,7 @@ for phoneNumber in phoneNumbers:
 
 resultPhones = ",\n".join(allPhoneNumbers)
 resultEmails = ",\n".join(emails)
-results = resultPhones + "\n\n" + resultEmails
+results = "Phones \n" + resultPhones + "\n\n" + "Emails \n" + resultEmails
 
 pyperclip.copy(results)
 
