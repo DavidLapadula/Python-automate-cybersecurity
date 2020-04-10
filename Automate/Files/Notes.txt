@@ -1,0 +1,52 @@
+Paths
+    - Path: folder list to path
+    - Files have extension depending on type of file
+    - OS
+        - module for paths
+        - path.join(), string value of path for all argument pass
+        - chdir() to change the working directory
+        - path.abspath(<pathtofile>) - will give abolsute when passed relative path
+        - path.relpath(<): relative path bewtween two folders
+        - path.dirname(): get up until last directory
+        - path.basename(): get last item of a path after last slash
+        - path.exists(): if the file exists
+        - path.isFile(), and isDir()
+        - path.getsize() to get size of file
+        - listdir(): return list of strings files and folders in path
+        - makedirs(): to make a new folder in either relative or absolute path
+    - CWD = current folder, no path and get this folder (os.getcwd)
+    - Abosolute: always starting with root
+    - Relative: relative to cwd
+    - . means this folder, .. means parent folder
+
+Files
+    -  open(): pass filename to open, opens file in read mode, and returns file object
+        - open in read/write mode determines what you can do to the file
+            - pass 'w' for write mode which overwrites file, or 'a' for append things at the end of the file
+        - can call read() to get contents, then close()
+        - readlines() returns list of strings instead of all text
+        - write(): to write strings to file
+shelve
+    - module for writing/reading binary data
+    - Access like key value pairs in a dictionary
+        - Can store non text data structure (list, dictionary) and then get again
+    - Have keys() and values() method
+
+shutil
+    - copy() to move files from one folder to another. First arg is file and second is destination
+        - provide filename and will rename the file
+    - copytree(): provide folder and destination and will copy the entire folder
+    - move(): provide file and destination and will move it
+        - rename requires using move() but same directory as destination and a different name
+
+Delete files
+    - os.unlink(): pass file to remove
+    - os.rmdir(): pass directory to remove, needs to be empty
+    - shutil.removetree(): delete folder and all its contents
+    - send2trasj module for sending to trash instead of deleting permanently
+
+Walk through dir tree
+    - os.walk()
+        - returns foldername(path as string), subfolders(as list), and filenames as list()
+    - Goes through every folder underneath, it walks the entire tree
+    - Can then change, delete, move anything in that directory tree
