@@ -1,0 +1,24 @@
+- Raise an exception when something it cant handle
+- "raise" to make own exception, without catching program will crash
+    - Will give traceback up until line that caused error
+    - Traceback package to get stack trace as string.
+        - Can write exception text without program stopping
+- Assert
+    "assert <condition>, message"
+    - If it fails, program should crash. For programmers, not user errors
+    - Call assert on something that has to be true
+    - If fails, Assert exception error thrown
+    - Shorten time for when bug occurs, so you can know
+- Logging
+    - logging.basicConfig(<filename>, <level>, <format>) to log things
+    - logging.debug(<message>)
+    - logging.disable(logging.CRITICAL) to turn off all logging
+        - 5 levels of logging, prints message at different level. Disable stops all logging at level passed or lower
+        - Allows you to disable low levels but keep higher more critical debugging
+- Debugger
+    - Examine values and variables in the cycle
+    - Execution pauses on first line and highlights, then execute based on commands issued
+    - Stepover: do not go into function calls and highlight variables, but they will still execute
+    - Stepinto: go into function anf highlight variables, until return
+    - Breakpoint
+        - debugger will only pause when the breakpoint is set to show you state of program

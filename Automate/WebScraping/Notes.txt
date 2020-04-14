@@ -1,0 +1,24 @@
+WebBrowser
+    - open(<url>) to open a new window
+    - &* to send command line argument to the script
+Requests
+    - Download data from website, better for exact URL 
+    - get(<url>) for all data
+        - return response object, with status_code, raise_for_status() will only be true if there was an error
+        - .text property has response
+        - can save to file using 'wb' for writing binary (need to keep unicode encoding)
+        - iter_content(<# of bytes>) returns chunks of content for a size that you choose
+BSoup
+    - Downloads HTML as basic text
+    - Pass result from website to Beautiful.Soup(<result from req>, 'html.parser') to find html elements
+        - Need to specify parser type
+    - select(<css selector>), will return list of selectors that match
+        - .text to get the text 
+Selenium
+    - Launches browser that you can control, click buttons, login etc
+    - webdriver.FireFox()
+        - get() to get url
+        - find_element_by_*
+            - to get elements as a list, and then that object has methods like click()
+        - send_keys(<value>) to send data to form and then can submit()
+    - back(), forward(), refresh() for more actions
