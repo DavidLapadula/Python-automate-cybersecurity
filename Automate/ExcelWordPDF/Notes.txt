@@ -1,0 +1,38 @@
+- Excel
+    - Workbook can contain multiple sheets
+    - Column, Row = cell
+    - openpyxl
+        - load_workbook(<path>) to open
+        - get_sheet_by_name(<sheet name>) or sheetname[<sheetname>]
+        - get_sheet_names()
+        - sheet[<col, row>].value
+        - sheet.cell(row=<>, col=<>)
+            - better for looping because can just use row/col indexes
+        - Workbook() - make new WB with single sheet
+            - Can then access values in the empty sheet
+            - save(<filename>) on Wb instance to save file
+            - create_sheet(<index=>, <title=>) to make new sheet, index for where to save
+            - sheetN.title(<new name>)
+- PDF
+    - Need to open file and pass it to PdfFileReader()
+    - numPages to count pages
+    - getPage().extractText()
+    - Can edit at page level, re-order, delete etc
+    - PdfFileWriter.addPage(<pageObject>) to add to document
+        - To save need new file object opened in "wb" mode
+        - Call write(<file object>) on writer object and pass in new file
+- Word
+    - Document is whole object > Paragraph objects > Run model
+    - Document() to make new object
+        - add_paragraph(<content>)
+        - can access paragraphs like a list and use add_run to add to the paragraph
+    - Document.paragraphs[<index>].text to get value
+    - New run objects everytime there is a change in the style
+        - Run object have text variable
+        - Also have italic, bold, and underline member variable that can be checked or changed
+    - save() method to save it
+    - Word has built in styles, and paragraph and run objects have style property that can be changed using.style = 'Title' (example)
+
+
+
+    
