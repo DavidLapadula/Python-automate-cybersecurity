@@ -1,0 +1,22 @@
+- GUI automation: send virtual keystrokes
+    - mouse
+        - size() will return W, H of screen
+        - position() for mouse
+        - moveTo(<x>, <y>, , <duration = seconds>)
+        - moveRel(<x rel>, <y rel>, <duration = seconds>)
+        - dragRel((<x rel>, <y rel>,) to drag mouse over screen
+        - click(<x>, <y>): to click something, doubleClick(), rightClick() etc. 
+            - Could take tuple for x, y
+        - displayMousePosition() to get coordinates of things on screen
+    - keyboard
+        - typewrite(<message>, <interval>): could pass a list of characters to get arrow keys and other special keys
+        - press(key)
+        - hotkey(<command 1>, <command 2>) to do things like CTRL-O
+        - KEYBOARD_KEYS for list of keys that can be pressed 
+    - Image Rec
+        - Screen shot features
+        - screenshot(<path>) will return Pillow image object
+        - locateOnScreen(<path>) to find something: return x, y, w, h of where the image is
+            - You pass the image and it will locate it on the screen
+        - locateCenterOnScreen(<path>), and then will return center of image x,y
+    
