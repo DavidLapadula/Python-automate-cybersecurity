@@ -1,0 +1,6 @@
+- SMTP: simple mail transfer protocol
+    - connect to server smptlib.SMTP(<domain>m <port>)
+        - every service has domain name plus the port
+    - ehlo() to connect, starttls() to start enryption, login(<u>, <p>)
+    - sendmail(<from>, <to>, <content>)
+- IMAP:  Internet Message Access Protocol
