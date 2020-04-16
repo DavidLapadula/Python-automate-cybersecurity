@@ -1,0 +1,11 @@
+- Banner Grabber
+    - Reponse headers reveal server information
+    - Headers returned from get requests
+    - Socket
+        - gethostbyname() will get you the IP address of the host name
+    - ipinfo.io to return location of ip address
+        - Make requests using host name and can get location data
+- Port Scanner
+    - nmap.PortScanner() to instantiate scanner
+    - PortScannerInstance.scan(<url>, <port(s)>): will return a dictionary of properties of the port
+        - Can return info on the status of each port, and the host generally
