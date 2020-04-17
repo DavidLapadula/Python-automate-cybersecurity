@@ -1,0 +1,18 @@
+- Banner Grabber
+    - Reponse headers reveal server information
+    - Headers returned from get requests
+    - Socket
+        - gethostbyname() will get you the IP address of the host name
+    - ipinfo.io to return location of ip address
+        - Make requests using host name and can get location data
+- Port Scanner
+    - nmap.PortScanner() to instantiate scanner
+    - PortScannerInstance.scan(<url>, <port(s)>): will return a dictionary of properties of the port
+        - Can return info on the status of each port, and the host generally
+- Screenshots
+    - App() to instantiate
+    - ScreenDC().GetSize() to get the size
+    - Make bitmap with BitMap() with size and the screen, pass BitMap() to Memory() and use Blit for image
+        - Blit() is how to allocate memory
+    - ftplib to send data over FTP
+        - open conenction with FTP() for credentials, open file as binary and then use storbinary(<STOR path>, <file>)
