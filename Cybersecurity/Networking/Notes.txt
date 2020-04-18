@@ -1,0 +1,46 @@
+- Socket
+    - Way of networking and communication
+    - New socket object with socket() for TCP
+        - AF_INET address family for IPv4, SOCK_STREAM means TCP connection
+    - socketInstance.bind(<host>, <port>), listen(<max connections>), accept() to accept connections
+    - accept() will return conn property, and then use send() from conn to send data back to client
+    - recieve(<bytes>) will get you return value from server
+- Sniffing
+    - Scapy module: craft,manipulate packets and sniff packets
+    - IP(dst=<domain>, ttl=10): provide domain and time to live
+    - show() to display packet info
+    - IFACES to get name of all network interfaces
+        - sniff(iface=<interface name>, count=<packet amount>, filter=<port XXX and host YYY>)
+            - Can check for summary
+        - SnifferInstance[<opt index>].show(<index>) will return packets
+        - load() to get hex and then pass to hexdemp to see data
+        - wrpcap(<file>, sniffer) to write sniffed to file, rdpcap(<file>) to read contents
+    - Sending a packet
+        - scay.IP(dst=<domain>)/scapy.ICMP()/"Message"
+            - ICMP protocol to send message over using forward slashes
+        - will return summary
+    - Flooding
+        - IP(src, dst) to make IP layer, TCP(sport, dport) for source port and destination port in TCP layer
+        - Packet is IPLayer/TCPLayer, and send() the packet
+            - Put in loop to flood the source. Flood the queue of the port by sending too many packets
+    - Attacking Web Forms
+        - Use requests to get info, and get the hostname
+        - Get content of page using request.content
+        - Use BeautifulSoup, and then prettify to get content of page
+            - HTML as properties of the response
+            - find_all(<element>, <property>)
+            - Use set() to get unique elements
+            - Use with ... as.. to work with file streams
+        - Send post requests to form with many passwords
+            - post(<form url>, data={"log": "admin", "password", "pw"}): need to send dictionary for data, where key is the "name" property of the field and value is password
+            - Request will return "ERROR" if wrong
+- Subdomain
+    - splitlines() to break line at boundaries
+    - f"{}" is a format string to concatenate strings
+    - Just make a get() request to subdomain and make sure no connection error
+
+
+        
+    
+
+
