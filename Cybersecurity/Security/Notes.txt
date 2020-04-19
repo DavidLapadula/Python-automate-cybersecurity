@@ -1,0 +1,13 @@
+- Hashes
+    - Hash a bunch of words and see if they match
+    - hashlib for cracking
+        - md5(bytes(text, encoding=)).hexdigest() to convert and test
+    - parser module, add ArgumentParser(command, dest=, help=, required=)
+        - dest keyword is value that can be referenced like object
+- Spoofing MAC address
+    - MAC: media access control, unique and for id and communication in network
+    - Use random letters and numbers a-f,0-9 with 6 pairs of each delimited by : to make fake address
+    - Need os.system to find MAC address
+    - subprocess.call([command, value]): provide commands and values as array
+
+
